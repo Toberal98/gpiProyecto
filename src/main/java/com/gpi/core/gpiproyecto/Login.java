@@ -5,6 +5,7 @@
  */
 package com.gpi.core.gpiproyecto;
 
+import com.gpi.core.gpiproyecto.views.PrincipalPage;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -45,7 +46,7 @@ public class Login extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         txtPassword = new javax.swing.JPasswordField();
         txtUsername = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jbtnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,9 +63,14 @@ public class Login extends javax.swing.JFrame {
         txtUsername.setBackground(new java.awt.Color(255, 255, 255));
         txtUsername.setBorder(null);
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 51));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Login");
+        jbtnLogin.setBackground(new java.awt.Color(0, 153, 51));
+        jbtnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        jbtnLogin.setText("Login");
+        jbtnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnLoginActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -89,7 +95,7 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(83, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(154, 154, 154))
         );
         jPanel2Layout.setVerticalGroup(
@@ -112,7 +118,7 @@ public class Login extends javax.swing.JFrame {
                         .addGap(3, 3, 3)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(35, 35, 35)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbtnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(60, Short.MAX_VALUE))
         );
 
@@ -144,6 +150,14 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLoginActionPerformed
+        this.setVisible(false);
+		this.dispose();
+		PrincipalPage principal = new PrincipalPage();
+				principal.setVisible(true);
+				principal.show();
+    }//GEN-LAST:event_jbtnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,12 +207,12 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JButton jbtnLogin;
     private javax.swing.JLabel lblImg;
     private javax.swing.JLabel lblicon1;
     private javax.swing.JLabel lblicon2;
